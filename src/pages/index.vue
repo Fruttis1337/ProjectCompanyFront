@@ -2,55 +2,61 @@
 defineOptions({
   name: 'IndexPage',
 })
-const user = useUserStore()
-const name = ref(user.savedName)
 
 const router = useRouter()
-function go() {
-  if (name.value)
-    router.push(`/hi/${encodeURIComponent(name.value)}`)
+
+function navigateToDogovora() {
+  router.push(`/Dogovor`)
 }
 
-const { t } = useI18n()
+function navigateToProjects() {
+  router.push(`/Projects`)
+}
+
+function navigateToEmployers() {
+  router.push(`/Employers`)
+}
+
+function navigateToSubcontracts() {
+  router.push(`/Subcontracts`)
+}
 </script>
 
 <template>
-  <div>
-    <div text-4xl>
-      <div i-carbon-campsite inline-block />
-    </div>
-    <p>
-      <a rel="noreferrer" href="https://github.com/antfu/vitesse" target="_blank">
-        Vitesse
-      </a>
-    </p>
-    <p>
-      <em text-sm opacity-75>{{ t('intro.desc') }}</em>
-    </p>
-
-    <div py-4 />
-
-    <TheInput
-      v-model="name"
-      :placeholder="t('intro.whats-your-name')"
-      autocomplete="false"
-      @keydown.enter="go"
-    />
-    <label class="hidden" for="input">{{ t('intro.whats-your-name') }}</label>
-
-    <div>
-      <button
-        m-3 text-sm btn
-        :disabled="!name"
-        @click="go"
-      >
-        {{ t('button.go') }}
-      </button>
-    </div>
+  <div class="centered-buttons">
+    <button class="bordered-button" @click="navigateToDogovora">
+      Договора
+    </button>
+    <button class="bordered-button" @click="navigateToProjects">
+      Проекты
+    </button>
+    <button class="bordered-button" @click="navigateToEmployers">
+      Сотрудники
+    </button>
+    <button class="bordered-button" @click="navigateToSubcontracts">
+      Субподрядчики
+    </button>
   </div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+layout: home
 </route>
+
+<style scoped>
+.centered-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bordered-button {
+  margin: 5px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  width: 200px;
+  text-align: center;
+  border: 1px solid #000; /* Добавление границы вокруг кнопок */
+}
+</style>
