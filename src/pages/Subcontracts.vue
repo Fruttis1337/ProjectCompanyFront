@@ -1,31 +1,31 @@
 <script setup lang="ts">
-function onGetProjectsInContract() {
+function onGetSubcontractsWorks() {
 
 }
-function onGetContractForProject() {
+function onCompleteSubcontractorWork() {
 
 }
-function onGetContractCosts() {
+function onCreateSubcontractorWorks() {
 
 }
-function onCreateContract() {
+function onCreateSubcontractors() {
 
 }
 </script>
 
 <template>
   <div class="button-container">
-    <button class="action-button" @click="onGetProjectsInContract">
-      Получить информацию о проектах в договоре
+    <button class="action-button" @click="onGetSubcontractsWorks">
+      Получить информацию о стоимости работ субподрядчиков
     </button>
-    <button class="action-button" @click="onGetContractForProject">
-      Получить информацию о договоре для проекта
+    <button class="action-button" @click="onCompleteSubcontractorWork">
+      Завершить работу субподрячика
     </button>
-    <button class="action-button" @click="onGetContractCosts">
-      Получить стоимость выполненных договоров
+    <button class="action-button" @click="onCreateSubcontractorWorks">
+      Назначить работы субподрядчику
     </button>
-    <button class="action-button" @click="onCreateContract">
-      Создать договор
+    <button class="action-button" @click="onCreateSubcontractors">
+      Создать субподрядчиков
     </button>
   </div>
 </template>
