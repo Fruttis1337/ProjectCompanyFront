@@ -1,31 +1,31 @@
 <script setup lang="ts">
-function onGetProjectsInContract() {
+function onGetProjectsInInterval() {
 
 }
-function onGetContractForProject() {
+function onPostProjectExec() {
 
 }
-function onGetContractCosts() {
+function onFinishProject() {
 
 }
-function onCreateContract() {
+function onCreateProjects() {
 
 }
 </script>
 
 <template>
   <div class="button-container">
-    <button class="action-button" @click="onGetProjectsInContract">
-      Получить информацию о проектах в договоре
+    <button class="action-button" @click="onGetProjectsInInterval">
+      Получить информацию о проектах за указаный промежуток
     </button>
-    <button class="action-button" @click="onGetContractForProject">
-      Получить информацию о договоре для проекта
+    <button class="action-button" @click="onPostProjectExec">
+      Задать сроки проекта
     </button>
-    <button class="action-button" @click="onGetContractCosts">
-      Получить стоимость выполненных договоров
+    <button class="action-button" @click="onCreateProjects">
+      Создать проекты
     </button>
-    <button class="action-button" @click="onCreateContract">
-      Создать договор
+    <button class="action-button" @click="onFinishProject">
+      Завершить проект
     </button>
   </div>
 </template>

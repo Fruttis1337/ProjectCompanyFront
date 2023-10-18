@@ -11,10 +11,6 @@ function onGetContractCosts() {
 function onCreateContract() {
 
 }
-
-function onCreateContractWithProjects() {
-
-}
 </script>
 
 <template>
@@ -27,9 +23,6 @@ function onCreateContractWithProjects() {
     </button>
     <button class="action-button" @click="onGetContractCosts">
       Получить стоимость выполненных договоров
-    </button>
-    <button class="action-button" @click="onCreateContractWithProjects">
-      Создать договор и назначить его проекты
     </button>
     <button class="action-button" @click="onCreateContract">
       Создать договор

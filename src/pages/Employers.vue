@@ -1,31 +1,38 @@
 <script setup lang="ts">
-function onGetProjectsInContract() {
+function onGetCategoryParticipationInfo() {
 
 }
-function onGetContractForProject() {
+function onGetEmployeParticipationInfo() {
 
 }
-function onGetContractCosts() {
+function onPostAddEmploye() {
 
 }
-function onCreateContract() {
+
+function onDeleteEmploye() {
+
+}
+function onPostAddEmployesToProject() {
 
 }
 </script>
 
 <template>
   <div class="button-container">
-    <button class="action-button" @click="onGetProjectsInContract">
-      Получить информацию о проектах в договоре
+    <button class="action-button" @click="onGetCategoryParticipationInfo">
+      Получить информацию о участии категорий сотрудников в проектах
     </button>
-    <button class="action-button" @click="onGetContractForProject">
-      Получить информацию о договоре для проекта
+    <button class="action-button" @click="onGetEmployeParticipationInfo">
+      Получить информацию о участии сотрудника в проектах
     </button>
-    <button class="action-button" @click="onGetContractCosts">
-      Получить стоимость выполненных договоров
+    <button class="action-button" @click="onPostAddEmployesToProject">
+      Добавить сотрудников в проект
     </button>
-    <button class="action-button" @click="onCreateContract">
-      Создать договор
+    <button class="action-button" @click="onPostAddEmploye">
+      Нанять сотрудника
+    </button>
+    <button class="action-button" @click="onDeleteEmploye">
+      Уволить сотрудника
     </button>
   </div>
 </template>
