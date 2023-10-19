@@ -1,31 +1,31 @@
 <script setup lang="ts">
-function onGetProjectsInContract() {
+function onGetEquipmentDistr() {
 
 }
-function onGetContractForProject() {
+function onGetEquipmentUsageByProject() {
 
 }
-function onGetContractCosts() {
+function onBindEquipment() {
 
 }
-function onCreateContract() {
+function onCreateEquipment() {
 
 }
 </script>
 
 <template>
   <div class="button-container">
-    <button class="action-button" @click="onGetProjectsInContract">
-      Получить информацию о проектах в договоре
+    <button class="action-button" @click="onGetEquipmentDistr">
+      Получить информацию о распределении оборудавания на указанную дату
     </button>
-    <button class="action-button" @click="onGetContractForProject">
-      Получить информацию о договоре для проекта
+    <button class="action-button" @click="onGetEquipmentUsageByProject">
+      Получить информацию о использовании оборудования указанным проектом
     </button>
-    <button class="action-button" @click="onGetContractCosts">
-      Получить стоимость выполненных договоров
+    <button class="action-button" @click="onBindEquipment">
+      Назначить оборудование
     </button>
-    <button class="action-button" @click="onCreateContract">
-      Создать договор
+    <button class="action-button" @click="onCreateEquipment">
+      Создать оборудование
     </button>
   </div>
 </template>

@@ -1,12 +1,13 @@
 <script setup lang="ts">
+const router = useRouter()
 function onGetProjectsInContract() {
-
+  router.push('/ProjectsInContract')
 }
 function onGetContractForProject() {
-
+  router.push('/ContractsByProjects')
 }
 function onGetContractCosts() {
-
+  router.push('/ContractCostsInInterval')
 }
 function onCreateContract() {
 
@@ -23,7 +24,7 @@ function onCreateContractWithProjects() {
       Получить информацию о проектах в договоре
     </button>
     <button class="action-button" @click="onGetContractForProject">
-      Получить информацию о договоре для проекта
+      Получить информацию о договорах по проектам
     </button>
     <button class="action-button" @click="onGetContractCosts">
       Получить стоимость выполненных договоров
