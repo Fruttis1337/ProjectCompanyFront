@@ -9,12 +9,8 @@ function onGetContractForProject() {
 function onGetContractCosts() {
   router.push('/ContractCostsInInterval')
 }
-function onCreateContract() {
-
-}
-
 function onCreateContractWithProjects() {
-
+  router.push('/CreateContractWithProjects')
 }
 </script>
 
@@ -31,9 +27,6 @@ function onCreateContractWithProjects() {
     </button>
     <button class="action-button" @click="onCreateContractWithProjects">
       Создать договор и назначить его проекты
-    </button>
-    <button class="action-button" @click="onCreateContract">
-      Создать договор
     </button>
   </div>
 </template>

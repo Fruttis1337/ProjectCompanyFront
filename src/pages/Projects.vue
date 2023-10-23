@@ -1,15 +1,16 @@
 <script setup lang="ts">
+const router = useRouter()
 function onGetProjectsInInterval() {
-
+  router.push('/ProjectsInInterval')
 }
 function onPostProjectExec() {
-
+  router.push('/AddProjExec')
 }
 function onFinishProject() {
-
+  router.push('/CompleteProj')
 }
 function onCreateProjects() {
-
+  router.push('/AddProjects')
 }
 </script>
 

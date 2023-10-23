@@ -1,19 +1,20 @@
 <script setup lang="ts">
+const router = useRouter()
 function onGetCategoryParticipationInfo() {
-
+  router.push('/GetCategoryInfo')
 }
 function onGetEmployeParticipationInfo() {
-
+  router.push('/GetEmployerInfo')
 }
 function onPostAddEmploye() {
-
+  router.push('/AddEmployer')
 }
 
 function onDeleteEmploye() {
-
+  router.push('/DissmissEmployer')
 }
 function onPostAddEmployesToProject() {
-
+  router.push('/AddEmployerToProj')
 }
 </script>
 
