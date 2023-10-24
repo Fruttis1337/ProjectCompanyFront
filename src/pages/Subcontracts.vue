@@ -1,15 +1,16 @@
 <script setup lang="ts">
+const router = useRouter()
 function onGetSubcontractsWorks() {
-
+  router.push('/GetSubcontractsWorks')
 }
 function onCompleteSubcontractorWork() {
-
+  router.push('/CompleteSubcontractWork')
 }
 function onCreateSubcontractorWorks() {
-
+  router.push('/CreateSubcontractWorks')
 }
 function onCreateSubcontractors() {
-
+  router.push('/AddSubcontracts')
 }
 </script>
 
