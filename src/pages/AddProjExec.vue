@@ -15,7 +15,7 @@ function addProjectExecution() {
   }
 
   axios
-    .post('/project-execution/', requestData)
+    .post('http://127.0.0.1:8000/project-execution/', requestData)
     .then((response) => {
       // eslint-disable-next-line no-console
       console.log('Исполнение проекта успешно добавлено', response.data)

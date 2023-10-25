@@ -8,7 +8,7 @@ const totalCost = ref(null)
 async function getContractCosts() {
   if (startDate.value && endDate.value) {
     try {
-      const response = await fetch(`/contract_costs_in_interval/?start_date=${startDate.value}&end_date=${endDate.value}`)
+      const response = await fetch(`http://127.0.0.1:8000/contract_costs_in_interval/?start_date=${startDate.value}&end_date=${endDate.value}`)
       if (response.ok) {
         const data = await response.json()
         totalCost.value = data.total_cost

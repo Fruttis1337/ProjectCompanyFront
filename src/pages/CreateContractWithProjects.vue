@@ -18,7 +18,7 @@ async function createContractWithProjects() {
     }
 
     // Выполнить запрос к серверу
-    const response = await axios.post('/create_contract_with_projects/', requestBody)
+    const response = await axios.post('http://127.0.0.1:8000/create_contract_with_projects/', requestBody)
     // eslint-disable-next-line no-console
     console.log(response.data) // Печать ответа сервера
   }

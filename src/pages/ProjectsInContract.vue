@@ -10,7 +10,7 @@ export default {
     async getProjectsInContract() {
       // Отправляем запрос на сервер для получения проектов по contract_id
       try {
-        const response = await fetch(`/projects_in_contract/${this.contractId}/`)
+        const response = await fetch(`http://127.0.0.1:8000/projects_in_contract/${this.contractId}/`)
         if (response.ok) {
           const data = await response.json()
           this.projects = data // Обновляем список проектов

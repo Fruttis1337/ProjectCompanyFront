@@ -9,7 +9,7 @@ const participationInfo = ref([])
 
 async function getCategoryParticipationInfo() {
   try {
-    const response = await axios.get(`/category_participation_info/?category=${category.value}&start_date=${startDate.value}&end_date=${endDate.value}`)
+    const response = await axios.get(`http://127.0.0.1:8000/category_participation_info/?category=${category.value}&start_date=${startDate.value}&end_date=${endDate.value}`)
     participationInfo.value = response.data
   }
   catch (error) {

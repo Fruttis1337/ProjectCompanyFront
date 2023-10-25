@@ -8,7 +8,7 @@ const completionStatus = ref(null)
 
 async function completeProject() {
   try {
-    const response = await axios.patch(`/complete-project/${projectId.value}/`, {
+    const response = await axios.patch(`http://127.0.0.1:8000/complete-project/${projectId.value}/`, {
       end_date: endDate.value,
     })
     if (response.data === true)

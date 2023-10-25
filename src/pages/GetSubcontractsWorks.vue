@@ -6,7 +6,7 @@ const subcontractorWorks = ref([])
 
 async function fetchSubcontractorWorks() {
   try {
-    const response = await axios.get('/subcontractor_works/')
+    const response = await axios.get('http://127.0.0.1:8000/subcontractor_works/')
     subcontractorWorks.value = response.data
   }
   catch (error) {

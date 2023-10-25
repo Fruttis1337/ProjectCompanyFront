@@ -14,7 +14,7 @@ const subcontractorWorksData = ref([
 
 async function addSubcontractorWorks() {
   try {
-    await axios.post('/subcontractor-works/', subcontractorWorksData.value)
+    await axios.post('http://127.0.0.1:8000/subcontractor-works/', subcontractorWorksData.value)
     // Обработка ответа, если необходимо
   }
   catch (error) {

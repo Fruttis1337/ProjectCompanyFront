@@ -22,7 +22,7 @@ async function addEmployeesToProject() {
       employees_data: employeesData.value,
     }
 
-    const response = await axios.post('/add_employees_to_project/', data)
+    const response = await axios.post('http://127.0.0.1:8000/add_employees_to_project/', data)
     addedEmployees.value = response.data
   }
   catch (error) {

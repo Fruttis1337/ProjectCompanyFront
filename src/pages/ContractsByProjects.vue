@@ -9,7 +9,7 @@ async function getContractsByProjects() {
   try {
     const projectIdsArray = projectIds.value.split(',').map(Number)
     // Выполните запрос к API для получения контрактов по проектам
-    const response = await axios.get('/contracts_by_projects/', {
+    const response = await axios.get('http://127.0.0.1:8000/contracts_by_projects/', {
       params: {
         projectIds: projectIdsArray,
       },

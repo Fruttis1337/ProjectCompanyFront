@@ -9,7 +9,7 @@ const employeeParticipation = ref(null)
 
 async function getEmployeeParticipationInfo() {
   try {
-    const response = await axios.get(`/employee_participation_info/${employeeId.value}/?start_date=${startDate.value}&end_date=${endDate.value}`)
+    const response = await axios.get(`http://127.0.0.1:8000/employee_participation_info/${employeeId.value}/?start_date=${startDate.value}&end_date=${endDate.value}`)
     employeeParticipation.value = response.data
   }
   catch (error) {

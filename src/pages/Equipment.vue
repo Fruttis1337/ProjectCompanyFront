@@ -1,9 +1,10 @@
 <script setup lang="ts">
+const router = useRouter()
 function onGetEquipmentDistr() {
-
+  router.push('/GetEquipmentDistr')
 }
 function onGetEquipmentUsageByProject() {
-
+  router.push('/GetEquipmentDistrProj')
 }
 function onBindEquipment() {
 

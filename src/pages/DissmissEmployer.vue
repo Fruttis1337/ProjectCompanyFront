@@ -7,7 +7,7 @@ const dateOfDismissal = ref(null)
 
 async function dismissEmployee() {
   try {
-    const response = await axios.put(`/dismiss_employee/?employee_id=${employeeId.value}&date_of_dismissal=${dateOfDismissal.value}`)
+    const response = await axios.put(`http://127.0.0.1:8000/dismiss_employee/?employee_id=${employeeId.value}&date_of_dismissal=${dateOfDismissal.value}`)
     if (response.data) {
       // eslint-disable-next-line no-alert
       alert('Сотрудник уволен успешно.')

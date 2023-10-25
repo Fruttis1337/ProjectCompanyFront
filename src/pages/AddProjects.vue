@@ -14,7 +14,7 @@ const addedProjects = ref([])
 
 async function addProjects() {
   try {
-    const response = await axios.post('/projects/', projectData.value)
+    const response = await axios.post('http://127.0.0.1:8000/projects/', projectData.value)
     addedProjects.value = response.data
   }
   catch (error) {

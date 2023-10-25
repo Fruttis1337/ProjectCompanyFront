@@ -9,7 +9,7 @@ const end_date = ref(null)
 
 async function completeWork() {
   try {
-    const response = await axios.patch(`/complete-subcontractor-work/${project_id.value}/${subcontractor_id.value}/${work_id.value}/`, {
+    const response = await axios.patch(`http://127.0.0.1:8000/complete-subcontractor-work/${project_id.value}/${subcontractor_id.value}/${work_id.value}/`, {
       end_date: end_date.value,
     })
     // eslint-disable-next-line no-console

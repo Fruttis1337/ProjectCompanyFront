@@ -9,7 +9,7 @@ const projects = ref([])
 async function getProjectsInInterval() {
   try {
     // Выполнить запрос к серверу, передав начальную и конечную дату
-    const response = await axios.get(`/projects_in_interval/?start_date=${startDate.value}&end_date=${endDate.value}`)
+    const response = await axios.get(`http://127.0.0.1:8000/projects_in_interval/?start_date=${startDate.value}&end_date=${endDate.value}`)
     projects.value = response.data // Обновить список проектов
   }
   catch (error) {
