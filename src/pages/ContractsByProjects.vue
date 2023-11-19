@@ -11,7 +11,7 @@ async function getContractsByProjects() {
     // Выполните запрос к API для получения контрактов по проектам
     const response = await axios.get('http://127.0.0.1:8000/contracts_by_projects/', {
       params: {
-        projectIds: projectIdsArray,
+        project_ids: projectIdsArray[0],
       },
     })
 
@@ -28,7 +28,7 @@ async function getContractsByProjects() {
   <div>
     <h1>Договоры по проектам</h1>
     <div class="input-container">
-      <label for="projectIdsInput">Введите ID проектов (через запятую):</label>
+      <label for="projectIdsInput">Введите ID проекта</label>
       <input id="projectIdsInput" v-model="projectIds" type="text" class="input-block">
       <button class="action-button" @click="getContractsByProjects">
         Получить договоры
@@ -53,7 +53,7 @@ async function getContractsByProjects() {
       </tbody>
     </table>
     <div v-else>
-      <p>Введите ID проектов (через запятую) и нажмите "Получить договоры"</p>
+      <p>Нет договора</p>
     </div>
   </div>
 </template>

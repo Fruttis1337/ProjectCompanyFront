@@ -16,13 +16,6 @@ function navigateToProjects() {
 function navigateToEmployers() {
   router.push(`/Employers`)
 }
-
-function navigateToSubcontracts() {
-  router.push(`/Subcontracts`)
-}
-function navigateToEquipment() {
-  router.push(`/Equipment`)
-}
 </script>
 
 <template>
@@ -35,12 +28,6 @@ function navigateToEquipment() {
     </button>
     <button class="bordered-button" @click="navigateToEmployers">
       Сотрудники
-    </button>
-    <button class="bordered-button" @click="navigateToSubcontracts">
-      Субподрядчики
-    </button>
-    <button class="bordered-button" @click="navigateToEquipment">
-      Оборудование
     </button>
   </div>
 </template>

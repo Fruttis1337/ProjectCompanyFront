@@ -3,13 +3,12 @@ import { ref } from 'vue'
 import axios from 'axios'
 
 const projectId = ref(null)
+const start_work = ref(null)
+const end_work = ref(null)
 
 const employeesData = ref([
   {
     employee_id: null, // Поле для ID сотрудника
-    start_work: null, // Поле для даты начала работы
-    end_work: null, // Поле для даты окончания работы
-    // Другие поля для данных о сотруднике
   },
 ])
 
@@ -17,12 +16,13 @@ const addedEmployees = ref([])
 
 async function addEmployeesToProject() {
   try {
-    const data = {
-      project_id: projectId.value,
-      employees_data: employeesData.value,
-    }
-
-    const response = await axios.post('http://127.0.0.1:8000/add_employees_to_project/', data)
+    const response = await axios.post('http://127.0.0.1:8000/add_employees_to_project/', employeesData.value, {
+      params: {
+        project_id: projectId.value,
+        start_work: start_work.value,
+        end_work: end_work.value,
+      },
+    })
     addedEmployees.value = response.data
   }
   catch (error) {
@@ -42,9 +42,9 @@ async function addEmployeesToProject() {
         <label for="employeeId">ID сотрудника:</label>
         <input id="employeeId" v-model="employee.employee_id" type="number" required class="input-field">
         <label for="startWork">Дата начала работы:</label>
-        <input id="startWork" v-model="employee.start_work" type="date" required class="input-field">
+        <input id="startWork" v-model="start_work" type="date" required class="input-field">
         <label for="endWork">Дата окончания работы:</label>
-        <input id="endWork" v-model="employee.end_work" type="date" class="input-field">
+        <input id="endWork" v-model="end_work" type="date" class="input-field">
         <hr>
       </div>
       <button type="submit" class="submit-button">

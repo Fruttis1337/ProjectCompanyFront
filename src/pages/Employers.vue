@@ -16,6 +16,10 @@ function onDeleteEmploye() {
 function onPostAddEmployesToProject() {
   router.push('/AddEmployerToProj')
 }
+
+function onGetEmplInProject() {
+  router.push('/GetEmployeesInProject')
+}
 </script>
 
 <template>
@@ -25,6 +29,9 @@ function onPostAddEmployesToProject() {
     </button>
     <button class="action-button" @click="onGetEmployeParticipationInfo">
       Получить информацию о участии сотрудника в проектах
+    </button>
+    <button class="action-button" @click="onGetEmplInProject">
+      Получить информацию о команде на проекте
     </button>
     <button class="action-button" @click="onPostAddEmployesToProject">
       Добавить сотрудников в проект

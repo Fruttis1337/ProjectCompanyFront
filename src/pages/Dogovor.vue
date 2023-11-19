@@ -6,8 +6,8 @@ function onGetProjectsInContract() {
 function onGetContractForProject() {
   router.push('/ContractsByProjects')
 }
-function onGetContractCosts() {
-  router.push('/ContractCostsInInterval')
+function onSalaryForMonth() {
+  router.push('/SalaryForMonth')
 }
 function onCreateContractWithProjects() {
   router.push('/CreateContractWithProjects')
@@ -22,8 +22,8 @@ function onCreateContractWithProjects() {
     <button class="action-button" @click="onGetContractForProject">
       Получить информацию о договорах по проектам
     </button>
-    <button class="action-button" @click="onGetContractCosts">
-      Получить стоимость выполненных договоров
+    <button class="action-button" @click="onSalaryForMonth">
+      Получить стоимость контрактов за месяц
     </button>
     <button class="action-button" @click="onCreateContractWithProjects">
       Создать договор и назначить его проекты

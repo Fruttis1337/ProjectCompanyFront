@@ -55,7 +55,7 @@ export default {
       </tbody>
     </table>
     <div v-else>
-      <p>Введите ID договора и нажмите "Получить проекты".</p>
+      <p>Нет проектов</p>
     </div>
   </div>
 </template>

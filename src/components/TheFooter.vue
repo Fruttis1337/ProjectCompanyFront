@@ -19,8 +19,8 @@ const { t } = useI18n()
     <button icon-btn :title="t('button.back')" @click="goBack()">
       <!--  TO-DO: исправить ошибку отображения -->
       <div i="carbon-sun" />
+      <!-- <Icon :icon="icons.chevronBack" /> -->
     </button>
-
     <button icon-btn :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </button>

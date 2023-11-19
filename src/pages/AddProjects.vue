@@ -5,8 +5,7 @@ import axios from 'axios'
 const projectData = ref([
   {
     title: '',
-    managerId: null, // Поле для ID менеджера
-    // Другие поля для данных о проекте
+    manager_id: null,
   },
 ])
 
@@ -33,7 +32,7 @@ async function addProjects() {
         <input id="title" v-model="project.title" type="text" required>
 
         <label for="managerId">ID менеджера:</label>
-        <input id="managerId" v-model="project.managerId" type="number" required>
+        <input id="managerId" v-model="project.manager_id" type="number" required>
 
         <!-- Другие поля для ввода данных о проекте -->
 
@@ -49,7 +48,7 @@ async function addProjects() {
       <h2>Добавленные проекты</h2>
       <ul>
         <li v-for="(project, index) in addedProjects" :key="index">
-          <strong>{{ project.title }}</strong> (Менеджер ID: {{ project.managerId }})
+          <strong>{{ project.title }}</strong> (Менеджер ID: {{ project.manager_id }})
           <!-- Вывод других данных о проекте -->
         </li>
       </ul>

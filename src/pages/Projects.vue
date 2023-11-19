@@ -6,8 +6,8 @@ function onGetProjectsInInterval() {
 function onPostProjectExec() {
   router.push('/AddProjExec')
 }
-function onFinishProject() {
-  router.push('/CompleteProj')
+function isFinishProject() {
+  router.push('/IsFinishedProject')
 }
 function onCreateProjects() {
   router.push('/AddProjects')
@@ -22,11 +22,11 @@ function onCreateProjects() {
     <button class="action-button" @click="onPostProjectExec">
       Задать сроки проекта
     </button>
+    <button class="action-button" @click="isFinishProject">
+      Проверить статус проекта
+    </button>
     <button class="action-button" @click="onCreateProjects">
       Создать проекты
-    </button>
-    <button class="action-button" @click="onFinishProject">
-      Завершить проект
     </button>
   </div>
 </template>

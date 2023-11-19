@@ -13,10 +13,9 @@ async function createContractWithProjects() {
   try {
     const projectIdsArray = projectIds.value.split(',').map(id => Number.parseInt(id.trim()))
     const requestBody = {
-      contract_data: contractData,
+      contract_data: contractData.value,
       project_ids: projectIdsArray,
     }
-
     // Выполнить запрос к серверу
     const response = await axios.post('http://127.0.0.1:8000/create_contract_with_projects/', requestBody)
     // eslint-disable-next-line no-console

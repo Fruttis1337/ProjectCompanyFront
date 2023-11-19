@@ -16,9 +16,10 @@ const dateOfHire = ref('')
 
 async function addEmployee() {
   try {
-    const response = await axios.post('http://127.0.0.1:8000/add_employee/', {
-      employee_data: employeeData.value,
-      date_of_hire: dateOfHire.value,
+    const response = await axios.post(`http://127.0.0.1:8000/add_employee/`, employeeData.value, {
+      params: {
+        date_of_hire: dateOfHire.value,
+      },
     })
     // Обработка успешного добавления сотрудника
     // eslint-disable-next-line no-console

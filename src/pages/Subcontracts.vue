@@ -3,9 +3,6 @@ const router = useRouter()
 function onGetSubcontractsWorks() {
   router.push('/GetSubcontractsWorks')
 }
-function onCompleteSubcontractorWork() {
-  router.push('/CompleteSubcontractWork')
-}
 function onCreateSubcontractorWorks() {
   router.push('/CreateSubcontractWorks')
 }
@@ -18,9 +15,6 @@ function onCreateSubcontractors() {
   <div class="button-container">
     <button class="action-button" @click="onGetSubcontractsWorks">
       Получить информацию о стоимости работ субподрядчиков
-    </button>
-    <button class="action-button" @click="onCompleteSubcontractorWork">
-      Завершить работу субподрячика
     </button>
     <button class="action-button" @click="onCreateSubcontractorWorks">
       Назначить работы субподрядчику
