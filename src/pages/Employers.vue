@@ -9,10 +9,6 @@ function onGetEmployeParticipationInfo() {
 function onPostAddEmploye() {
   router.push('/AddEmployer')
 }
-
-function onDeleteEmploye() {
-  router.push('/DissmissEmployer')
-}
 function onPostAddEmployesToProject() {
   router.push('/AddEmployerToProj')
 }
@@ -38,9 +34,6 @@ function onGetEmplInProject() {
     </button>
     <button class="action-button" @click="onPostAddEmploye">
       Нанять сотрудника
-    </button>
-    <button class="action-button" @click="onDeleteEmploye">
-      Уволить сотрудника
     </button>
   </div>
 </template>

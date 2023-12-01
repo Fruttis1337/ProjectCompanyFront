@@ -48,7 +48,7 @@ async function addProjects() {
       <h2>Добавленные проекты</h2>
       <ul>
         <li v-for="(project, index) in addedProjects" :key="index">
-          <strong>{{ project.title }}</strong> (Менеджер ID: {{ project.manager_id }})
+          <strong> {{ project.title }}  ID: {{ project.id }}</strong> (Менеджер ID: {{ project.manager_id }})
           <!-- Вывод других данных о проекте -->
         </li>
       </ul>

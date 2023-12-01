@@ -13,6 +13,7 @@ const employeeData = ref({
 })
 
 const dateOfHire = ref('')
+const newEmployeeData = ref(null)
 
 async function addEmployee() {
   try {
@@ -21,9 +22,7 @@ async function addEmployee() {
         date_of_hire: dateOfHire.value,
       },
     })
-    // Обработка успешного добавления сотрудника
-    // eslint-disable-next-line no-console
-    console.log('Сотрудник добавлен:', response.data)
+    newEmployeeData.value = response.data
   }
   catch (error) {
     console.error('Ошибка при добавлении сотрудника', error)
@@ -87,6 +86,10 @@ async function addEmployee() {
         Добавить сотрудника
       </button>
     </form>
+    <div v-if="newEmployeeData">
+      <h3>Новый сотрудник добавлен:</h3>
+      <pre> {{ newEmployeeData.name }} {{ newEmployeeData.lastname }} ID:{{ newEmployeeData.id }}</pre>
+    </div>
   </div>
 </template>
 

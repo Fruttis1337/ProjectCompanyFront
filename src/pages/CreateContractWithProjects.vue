@@ -8,6 +8,7 @@ const contractData = ref({
   price: 0,
 })
 const projectIds = ref('')
+const addedContractInfo = ref(null)
 
 async function createContractWithProjects() {
   try {
@@ -18,6 +19,7 @@ async function createContractWithProjects() {
     }
     // Выполнить запрос к серверу
     const response = await axios.post('http://127.0.0.1:8000/create_contract_with_projects/', requestBody)
+    addedContractInfo.value = response.data
     // eslint-disable-next-line no-console
     console.log(response.data) // Печать ответа сервера
   }
@@ -49,6 +51,11 @@ async function createContractWithProjects() {
     <button class="styled-button" @click="createContractWithProjects">
       Создать договор
     </button>
+
+    <div v-if="addedContractInfo">
+      <h3>Добавленный договор:</h3>
+      <pre>{{ addedContractInfo.title }} ID: {{ addedContractInfo.id }}</pre>
+    </div>
   </div>
 </template>
 

@@ -30,8 +30,8 @@ async function getEmployees() {
       Получить участников проекта
     </button>
     <div v-if="employees !== null">
-      <ul>
-        <li v-for="employee in employees" :key="employee.id">
+      <div v-for="employee in employees" :key="employee.id" class="employee-container">
+        <div class="employee-info">
           <p>Имя: {{ employee.name }}</p>
           <p>Фамилия: {{ employee.lastname }}</p>
           <p>Должность: {{ employee.position }}</p>
@@ -40,8 +40,8 @@ async function getEmployees() {
           <p>Дата рождения: {{ employee.birthday }}</p>
           <p>Email: {{ employee.mail }}</p>
           <p>ID: {{ employee.id }}</p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -60,5 +60,14 @@ async function getEmployees() {
   margin: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
+}
+.employee-container {
+  border: 1px solid #000; /* Граница вокруг каждого контейнера сотрудника */
+  margin: 10px;
+  padding: 10px;
+}
+
+.employee-info {
+  /* Стилизуйте по своему усмотрению */
 }
 </style>
